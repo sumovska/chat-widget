@@ -4,14 +4,262 @@
 /* ==========================================================================
    GENERAL BLOCKS
    ========================================================================== */
+.pseudo {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+}
+.clearfix {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
 .wchat-container {
   position: fixed;
-  right: 30px;
+  right: 0;
   bottom: 0;
   z-index: 9999;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+.wchat-container * {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.wchat-container *:focus {
+  outline: -webkit-focus-ring-color auto 0;
+}
+/* ==========================================================================
+   WINDOW
+   ========================================================================== */
 .wchat-window {
+  width: 370px;
+  border-radius: 3px;
+  margin-right: 30px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 0;
   background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.wchat-header {
+  height: 76px;
+  position: relative;
+  background: #f2f2f2;
+}
+.wchat-heading {
+  padding: 17px 20px 13px;
+  border-radius: 3px 3px 0 0;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  color: #fff;
+  background: #2683d3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.wchat-heading:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+}
+.wchat-avatar {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 10;
+}
+.wchat-avatar + .wchat-heading {
+  padding-left: 92px;
+}
+.wchat-avatar img {
+  width: 64px;
+  height: 64px;
+  border: 3px solid #fff;
+  display: block;
+}
+.wchat-minimize {
+  width: 34px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 40px;
+  z-index: 20;
+  text-decoration: none;
+}
+.wchat-minimize:before {
+  display: block;
+  content: '\0020';
+  width: 20px;
+  height: 2px;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  left: 0;
+  background: #fff;
+}
+.wchat-close {
+  width: 34px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 20;
+  text-decoration: none;
+}
+.wchat-close:before,
+.wchat-close:after {
+  display: block;
+  content: '\0020';
+  width: 24px;
+  height: 2px;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.wchat-close:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.wchat-close:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.wchat-footer {
+  height: 30px;
+  padding: 6px 15px;
+  position: relative;
+  overflow: hidden;
+  font: bold 12px/18px 'Calibri', Helvetica, Arial, sans-serif;
+  color: #939393;
+  white-space: nowrap;
+  background: #f2f2f2;
+}
+.wchat-footer a {
+  border: none;
+  display: inline;
+  color: #2683d3;
+  text-decoration: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.wchat-footer a:hover, .wchat-footer a:focus {
+  border: none;
+  display: inline;
+  color: #2683d3;
+  text-decoration: underline;
+}
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+.wchat-content {
+  padding: 33px 40px;
+  position: relative;
+}
+.wchat-content:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+/* ==========================================================================
+   FORM-LOGIN
+   ========================================================================== */
+.wchat-form-login {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.wchat-form-login .wchat-form-line:last-child {
+  margin-bottom: 0;
+}
+.wchat-form-line {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 10px;
+  float: none;
+  display: block;
+  font: bold 13px/14px 'Calibri', Helvetica, Arial, sans-serif;
+  letter-spacing: -0.025em;
+  color: #939393;
+}
+.wchat-form-line:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.wchat-form-label {
+  width: 100%;
+  padding: 2px 0 3px;
+  margin: 0;
+  display: block;
+  font: inherit;
+  color: inherit;
+}
+.wchat-form-text {
+  width: 100%;
+  padding: 9px 6px;
+  border: 1px solid #696969;
+  border-radius: 3px;
+  margin: 0;
+  float: none;
+  display: block;
+  font: 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #696969;
+}
+.wchat-form-submit {
+  width: 100%;
+  height: 45px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 38px;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 35px;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-align: center;
+  background: #70cf5f;
+  -webkit-transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: inset 0 -4px 0 0 #61c351;
+}
+.wchat-form-submit:hover, .wchat-form-submit:focus {
+  color: #fff;
+  text-decoration: none;
+  background: #61c351;
 }
 /* ==========================================================================
    RESPONSIVE

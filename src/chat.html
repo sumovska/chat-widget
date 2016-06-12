@@ -1,15 +1,45 @@
 <!doctype html>
 <html xml:lang="en" lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Chat Widget</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link href="css/widget-chat.css" rel="stylesheet">
+	<link href="css/chat-widget.css" rel="stylesheet">
 </head>
+
 <body>
 	<div class="wchat-container">
-
+		<div class="wchat-window">
+			<div class="wchat-header">
+				<div class="wchat-avatar"><img src="img/avatar.jpg" alt="Username"></div>
+				<div class="wchat-heading">I’m Here to Help You</div>
+				<a class="wchat-minimize" href="#"></a>
+				<a class="wchat-close" href="#"></a>
+			</div>
+			<div class="wchat-content">
+				<form class="wchat-form-login" action="#">
+					<div class="wchat-form-line">
+						<div class="wchat-form-label">Your Name</div>
+						<input class="wchat-form-text" type="text" value="rob">
+					</div>
+					<div class="wchat-form-line">
+						<div class="wchat-form-label">E-mail</div>
+						<input class="wchat-form-text" type="email" value="ro@yahoo.com">
+					</div>
+					<div class="wchat-form-line">
+						<div class="wchat-form-label">Phone</div>
+						<input class="wchat-form-text" type="tel" value="">
+					</div>
+					<div class="wchat-form-line">
+						<a class="wchat-form-submit" href="#">Start Chat</a>
+					</div>
+				</form>
+			</div>
+			<div class="wchat-footer">Powered by <a href="http://smartchat.com" target="_blank">SmartChat.com</a></div>
+		</div>
 	</div>
 </body>
+
 </html>

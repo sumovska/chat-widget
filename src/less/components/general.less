@@ -1,12 +1,30 @@
 /* ==========================================================================
    GENERAL BLOCKS
    ========================================================================== */
-.wchat-container {
+.pseudo {
+    display: block;
+    content: '\0020';
+    overflow: hidden;
+}
+.clearfix {
+    display: table;
+    content: '\0020';
+    clear: both;
+}
+.@{prefix}-container {
     position: fixed;
-    right: 30px;
+    right: 0;
     bottom: 0;
     z-index: 9999;
-}
-.wchat-window {
-    background: @color-white;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        &:focus {
+            outline: -webkit-focus-ring-color auto 0;
+        }
+    }
 }
