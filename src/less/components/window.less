@@ -13,8 +13,8 @@
     .color-black(.4);
     box-shadow: 0 0 20px @color;
     .@{prefix}-container-top-left &, .@{prefix}-container-bottom-left & {
-      margin-right: 0;
-      margin-left: 30px;
+        margin-right: 0;
+        margin-left: 30px;
     }
 }
 /* ==========================================================================
@@ -233,117 +233,148 @@
    CHAT-BOX
    ========================================================================== */
 .@{prefix}-box {
-  margin: -33px -40px;
-  &:after {.clearfix;}
-  .@{prefix}-messages {
-    height: 260px;
-    overflow: hidden;
-    overflow-y: scroll;
-    font: 500 18px/18px @font-secondary;
-    color: @color-gray-dark;
-    .@{prefix}-line {
-      padding: 8px 24px 8px 14px;
-      letter-spacing: -0.053em;
-      &.@{prefix}-line-question {
-        padding-left: 50px;
-        color: @color-azure;
-        text-align: right;
-      }
+    margin: -33px -40px;
+    &:after {
+        .clearfix;
     }
-  }
-  .@{prefix-form}-message {
-    margin: 0;
-    border-top: 1px solid @color-gray-pastel;
-    textarea {
-      width: 100%;
-      height: 70px;
-      padding: 10px;
-      display: block;
-      border: none;
-      resize: none;
-      font: 500 17px/18px @font-secondary;
-      color: @color-gray-dark;
+    .@{prefix}-messages {
+        height: 260px;
+        overflow: hidden;
+        overflow-y: scroll;
+        font: 500 18px/18px @font-secondary;
+        color: @color-gray-dark;
+        .@{prefix}-line {
+            padding: 8px 24px 8px 14px;
+            letter-spacing: -.053em;
+            &.@{prefix}-line-question {
+                padding-left: 50px;
+                color: @color-azure;
+                text-align: right;
+            }
+        }
     }
-  }
+    .@{prefix-form}-message {
+        margin: 0;
+        border-top: 1px solid @color-gray-pastel;
+        textarea {
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+            display: block;
+            border: none;
+            resize: none;
+            font: 500 17px/18px @font-secondary;
+            color: @color-gray-dark;
+        }
+    }
 }
 /* ==========================================================================
    WCHAT-START
    ========================================================================== */
 .wchat-start {
-  width: 275px;
-  margin: 50px;
-  font-family: @font-primary;
-  text-align: center;
-  &:after, .wchat-link:after {.clearfix;}
-  .wchat-link {
-    display: flex;
-    color: @color-gray;
-    text-decoration: none;
-    &:hover {
-      .wchat-text {
-        background: @color-blue;
-        color: @color-white;
-      }
-      .wchat-title {
-        color: @color-white;
-      }
+    width: 275px;
+    margin: 30px;
+    font-family: @font-primary;
+    &:after, .wchat-link:after {
+        .clearfix;
     }
-  }
-  .wchat-photo {
-    min-width: 68px;
-    max-width: 68px;
-    height: 64px;
-    overflow: hidden;
-    flex-basis: 68px;
-    border-radius: 10px;
-    border: 3px solid @color-blue;
-    order: 20;
-    position: relative;
-    img {
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-      display: block;
+    .wchat-link {
+        display: flex;
+        color: @color-gray;
+        text-decoration: none;
+        transition: color @duration;
+        &:hover {
+            color: @color-white;
+            .wchat-text {
+                background: @color-blue;
+                &:after {
+                    border-color: transparent transparent transparent @color-blue;
+                }
+            }
+            .wchat-title {
+                color: @color-white;
+            }
+        }
     }
-    .wchat-activity {
-      color: @color-green-texas;
-      background: @color-white;
-      font-size: 12px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      &:before {
-        .pseudo;
-        width: 7px;
-        height: 7px;
-        margin: 0 4px 0 -4px;
-        display: inline-block;
-        vertical-align: middle;
-        border-radius: 50%;
-        background: @color-green-texas;
-      }
+    .wchat-photo {
+        min-width: 68px;
+        max-width: 68px;
+        height: 64px;
+        overflow: hidden;
+        flex-basis: 68px;
+        border-radius: 10px;
+        border: 3px solid @color-blue;
+        order: 20;
+        text-align: center;
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        .wchat-activity {
+            color: @color-green-texas;
+            background: @color-white;
+            font-size: 12px;
+            line-height: 14px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            &:before {
+                .pseudo;
+                width: 7px;
+                height: 7px;
+                margin: 0 4px 0 -4px;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 50%;
+                background: @color-green-texas;
+            }
+        }
     }
-  }
-  .wchat-text {
-    margin-right: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    border: 3px solid @color-blue;
-    align-content: center;
-    justify-content: center;
-    text-transform: capitalize;
-    font-size: 12px;
-    line-height: 12px;
-    transition: background @duration, color @duration;
-  }
-  .wchat-title {
-    color: @color-blue;
-    text-transform: uppercase;
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: bold;
-    transition: color @duration;
-  }
+    .wchat-text {
+        margin-right: 15px;
+        padding: 4px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        border: 3px solid @color-blue;
+        align-content: center;
+        text-transform: capitalize;
+        font-size: 12px;
+        line-height: 12px;
+        transition: background @duration;
+        position: relative;
+        &:before, &:after {
+            .pseudo;
+            margin: auto 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            transition: border-color @duration;
+        }
+        &:before {
+            margin-left: 2px;
+            border-width: 10px 0 10px 12px;
+            border-color: transparent transparent transparent @color-blue;
+        }
+        &:after {
+            border-width: 8px 0 8px 10px;
+            border-color: transparent transparent transparent @color-white;
+        }
+    }
+    .wchat-title {
+        color: @color-blue;
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 30px;
+        font-weight: bold;
+        transition: color @duration;
+    }
 }

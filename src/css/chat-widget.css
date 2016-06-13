@@ -329,9 +329,8 @@
    ========================================================================== */
 .wchat-start {
   width: 275px;
-  margin: 50px;
+  margin: 30px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: center;
 }
 .wchat-start:after,
 .wchat-start .wchat-link:after {
@@ -345,10 +344,17 @@
   display: flex;
   color: #696969;
   text-decoration: none;
+  -webkit-transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wchat-start .wchat-link:hover, .wchat-start .wchat-link:focus {
+  color: #fff;
 }
 .wchat-start .wchat-link:hover .wchat-text, .wchat-start .wchat-link:focus .wchat-text {
   background: #2683d3;
-  color: #fff;
+}
+.wchat-start .wchat-link:hover .wchat-text:after, .wchat-start .wchat-link:focus .wchat-text:after {
+  border-color: transparent transparent transparent #2683d3;
 }
 .wchat-start .wchat-link:hover .wchat-title, .wchat-start .wchat-link:focus .wchat-title {
   color: #fff;
@@ -365,6 +371,7 @@
   -webkit-box-ordinal-group: 21;
       -ms-flex-order: 20;
           order: 20;
+  text-align: center;
   position: relative;
 }
 .wchat-start .wchat-photo img {
@@ -377,6 +384,7 @@
   color: #009e1d;
   background: #fff;
   font-size: 12px;
+  line-height: 14px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -396,6 +404,7 @@
 }
 .wchat-start .wchat-text {
   margin-right: 15px;
+  padding: 4px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,14 +414,37 @@
   border: 3px solid #2683d3;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-transform: capitalize;
   font-size: 12px;
   line-height: 12px;
-  -webkit-transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+}
+.wchat-start .wchat-text:before,
+.wchat-start .wchat-text:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  margin: auto 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wchat-start .wchat-text:before {
+  margin-left: 2px;
+  border-width: 10px 0 10px 12px;
+  border-color: transparent transparent transparent #2683d3;
+}
+.wchat-start .wchat-text:after {
+  border-width: 8px 0 8px 10px;
+  border-color: transparent transparent transparent #fff;
 }
 .wchat-start .wchat-title {
   color: #2683d3;
