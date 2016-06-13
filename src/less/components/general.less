@@ -46,3 +46,17 @@
 .@{prefix}-hidden {
   display: none;
 }
+.@{prefix}-mobile-hidden {
+  display: none;
+  @media @tablet-sm {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.@{prefix}-desktop-hidden {
+  display: inline-block;
+  vertical-align: top;
+  @media @tablet-sm {
+    display: none;
+  }
+}
