@@ -12,6 +12,10 @@
     background: @color-white;
     .color-black(.4);
     box-shadow: 0 0 20px @color;
+    .@{prefix}-container-top-left &, .@{prefix}-container-bottom-left & {
+      margin-right: 0;
+      margin-left: 30px;
+    }
 }
 /* ==========================================================================
    HEADER
@@ -260,5 +264,86 @@
       font: 500 17px/18px @font-secondary;
       color: @color-gray-dark;
     }
+  }
+}
+/* ==========================================================================
+   WCHAT-START
+   ========================================================================== */
+.wchat-start {
+  width: 275px;
+  margin: 50px;
+  font-family: @font-primary;
+  text-align: center;
+  &:after, .wchat-link:after {.clearfix;}
+  .wchat-link {
+    display: flex;
+    color: @color-gray;
+    text-decoration: none;
+    &:hover {
+      .wchat-text {
+        background: @color-blue;
+        color: @color-white;
+      }
+      .wchat-title {
+        color: @color-white;
+      }
+    }
+  }
+  .wchat-photo {
+    min-width: 68px;
+    max-width: 68px;
+    height: 64px;
+    overflow: hidden;
+    flex-basis: 68px;
+    border-radius: 10px;
+    border: 3px solid @color-blue;
+    order: 20;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+    .wchat-activity {
+      color: @color-green-texas;
+      background: @color-white;
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &:before {
+        .pseudo;
+        width: 7px;
+        height: 7px;
+        margin: 0 4px 0 -4px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        background: @color-green-texas;
+      }
+    }
+  }
+  .wchat-text {
+    margin-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 3px solid @color-blue;
+    align-content: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 12px;
+    line-height: 12px;
+    transition: background @duration, color @duration;
+  }
+  .wchat-title {
+    color: @color-blue;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+    transition: color @duration;
   }
 }

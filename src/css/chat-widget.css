@@ -61,6 +61,11 @@
   background: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
+.wchat-container-top-left .wchat-window,
+.wchat-container-bottom-left .wchat-window {
+  margin-right: 0;
+  margin-left: 30px;
+}
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -318,6 +323,105 @@
   resize: none;
   font: 500 17px/18px 'Calibri', Helvetica, Arial, sans-serif;
   color: #515151;
+}
+/* ==========================================================================
+   WCHAT-START
+   ========================================================================== */
+.wchat-start {
+  width: 275px;
+  margin: 50px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.wchat-start:after,
+.wchat-start .wchat-link:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.wchat-start .wchat-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #696969;
+  text-decoration: none;
+}
+.wchat-start .wchat-link:hover .wchat-text, .wchat-start .wchat-link:focus .wchat-text {
+  background: #2683d3;
+  color: #fff;
+}
+.wchat-start .wchat-link:hover .wchat-title, .wchat-start .wchat-link:focus .wchat-title {
+  color: #fff;
+}
+.wchat-start .wchat-photo {
+  min-width: 68px;
+  max-width: 68px;
+  height: 64px;
+  overflow: hidden;
+  -ms-flex-preferred-size: 68px;
+      flex-basis: 68px;
+  border-radius: 10px;
+  border: 3px solid #2683d3;
+  -webkit-box-ordinal-group: 21;
+      -ms-flex-order: 20;
+          order: 20;
+  position: relative;
+}
+.wchat-start .wchat-photo img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.wchat-start .wchat-photo .wchat-activity {
+  color: #009e1d;
+  background: #fff;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.wchat-start .wchat-photo .wchat-activity:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 7px;
+  height: 7px;
+  margin: 0 4px 0 -4px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #009e1d;
+}
+.wchat-start .wchat-text {
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 10px;
+  border: 3px solid #2683d3;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: capitalize;
+  font-size: 12px;
+  line-height: 12px;
+  -webkit-transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.wchat-start .wchat-title {
+  color: #2683d3;
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: bold;
+  -webkit-transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 /* ==========================================================================
    RESPONSIVE
