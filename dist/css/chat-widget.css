@@ -52,7 +52,7 @@
   position: relative;
   background: #f2f2f2;
 }
-.wchat-heading {
+.wchat-header .wchat-heading {
   padding: 17px 20px 13px;
   border-radius: 3px 3px 0 0;
   margin-bottom: 30px;
@@ -72,12 +72,12 @@
       -ms-user-select: none;
           user-select: none;
 }
-.wchat-heading:after {
+.wchat-header .wchat-heading:after {
   display: block;
   content: '\0020';
   overflow: hidden;
 }
-.wchat-avatar {
+.wchat-header .wchat-avatar {
   width: 64px;
   height: 64px;
   position: absolute;
@@ -85,16 +85,16 @@
   left: 6px;
   z-index: 10;
 }
-.wchat-avatar + .wchat-heading {
+.wchat-header .wchat-avatar + .wchat-heading {
   padding-left: 92px;
 }
-.wchat-avatar img {
+.wchat-header .wchat-avatar img {
   width: 64px;
   height: 64px;
   border: 3px solid #fff;
   display: block;
 }
-.wchat-minimize {
+.wchat-header .wchat-minimize {
   width: 34px;
   height: 34px;
   display: block;
@@ -104,7 +104,7 @@
   z-index: 20;
   text-decoration: none;
 }
-.wchat-minimize:before {
+.wchat-header .wchat-minimize:before {
   display: block;
   content: '\0020';
   width: 20px;
@@ -117,7 +117,7 @@
   left: 0;
   background: #fff;
 }
-.wchat-close {
+.wchat-header .wchat-close {
   width: 34px;
   height: 34px;
   display: block;
@@ -127,8 +127,8 @@
   z-index: 20;
   text-decoration: none;
 }
-.wchat-close:before,
-.wchat-close:after {
+.wchat-header .wchat-close:before,
+.wchat-header .wchat-close:after {
   display: block;
   content: '\0020';
   width: 24px;
@@ -142,12 +142,12 @@
   left: 0;
   background: #fff;
 }
-.wchat-close:before {
+.wchat-header .wchat-close:before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.wchat-close:after {
+.wchat-header .wchat-close:after {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -202,7 +202,7 @@
 .wchat-form-login .wchat-form-line:last-child {
   margin-bottom: 0;
 }
-.wchat-form-line {
+.wchat-form-login .wchat-form-line {
   width: 100%;
   padding: 0;
   margin: 0 0 10px;
@@ -212,12 +212,12 @@
   letter-spacing: -0.025em;
   color: #939393;
 }
-.wchat-form-line:after {
+.wchat-form-login .wchat-form-line:after {
   display: table;
   content: '\0020';
   clear: both;
 }
-.wchat-form-label {
+.wchat-form-login .wchat-form-label {
   width: 100%;
   padding: 2px 0 3px;
   margin: 0;
@@ -225,7 +225,7 @@
   font: inherit;
   color: inherit;
 }
-.wchat-form-text {
+.wchat-form-login .wchat-form-text {
   width: 100%;
   padding: 9px 6px;
   border: 1px solid #696969;
@@ -236,7 +236,7 @@
   font: 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #696969;
 }
-.wchat-form-submit {
+.wchat-form-login .wchat-form-submit {
   width: 100%;
   height: 45px;
   padding: 5px;
@@ -256,7 +256,7 @@
   transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   box-shadow: inset 0 -4px 0 0 #61c351;
 }
-.wchat-form-submit:hover, .wchat-form-submit:focus {
+.wchat-form-login .wchat-form-submit:hover, .wchat-form-login .wchat-form-submit:focus {
   color: #fff;
   text-decoration: none;
   background: #61c351;

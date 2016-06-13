@@ -20,98 +20,99 @@
     height: 76px;
     position: relative;
     background: @color-silver;
-}
-.@{prefix}-heading {
-    padding: 17px 20px 13px;
-    border-radius: 3px 3px 0 0;
-    margin-bottom: 30px;
-    overflow: hidden;
-    position: relative;
-    z-index: 5;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .01em;
-    white-space: nowrap;
-    color: @color-white;
-    background: @color-blue;
-    user-select: none;
 
-    &:after {
-        .pseudo;
+    .@{prefix}-heading {
+        padding: 17px 20px 13px;
+        border-radius: 3px 3px 0 0;
+        margin-bottom: 30px;
+        overflow: hidden;
+        position: relative;
+        z-index: 5;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .01em;
+        white-space: nowrap;
+        color: @color-white;
+        background: @color-blue;
+        user-select: none;
+
+        &:after {
+            .pseudo;
+        }
     }
-}
-.@{prefix}-avatar {
-    width: 64px;
-    height: 64px;
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    z-index: 10;
-
-    + .@{prefix}-heading {
-        padding-left: 92px;
-    }
-
-    img {
+    .@{prefix}-avatar {
         width: 64px;
         height: 64px;
-        border: 3px solid @color-white;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        z-index: 10;
+
+        + .@{prefix}-heading {
+            padding-left: 92px;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+            border: 3px solid @color-white;
+            display: block;
+        }
+    }
+    .@{prefix}-minimize {
+        width: 34px;
+        height: 34px;
         display: block;
-    }
-}
-.@{prefix}-minimize {
-    width: 34px;
-    height: 34px;
-    display: block;
-    position: absolute;
-    top: 6px;
-    right: 40px;
-    z-index: 20;
-    text-decoration: none;
-
-    &:before {
-        .pseudo;
-        width: 20px;
-        height: 2px;
-        margin: auto;
-        overflow: hidden;
         position: absolute;
-        right: 0;
-        bottom: 9px;
-        left: 0;
-        background: @color-white;
-    }
-}
-.@{prefix}-close {
-    width: 34px;
-    height: 34px;
-    display: block;
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    z-index: 20;
-    text-decoration: none;
+        top: 6px;
+        right: 40px;
+        z-index: 20;
+        text-decoration: none;
 
-    &:before, &:after {
-        .pseudo;
-        width: 24px;
-        height: 2px;
-        margin: auto;
-        overflow: hidden;
+        &:before {
+            .pseudo;
+            width: 20px;
+            height: 2px;
+            margin: auto;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            bottom: 9px;
+            left: 0;
+            background: @color-white;
+        }
+    }
+    .@{prefix}-close {
+        width: 34px;
+        height: 34px;
+        display: block;
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: @color-white;
-    }
-    &:before {
-        transform: rotate(45deg);
-    }
-    &:after {
-        transform: rotate(-45deg);
+        top: 6px;
+        right: 6px;
+        z-index: 20;
+        text-decoration: none;
+
+        &:before, &:after {
+            .pseudo;
+            width: 24px;
+            height: 2px;
+            margin: auto;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: @color-white;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
     }
 }
 /* ==========================================================================
@@ -163,63 +164,64 @@
     .@{prefix-form}-line:last-child {
         margin-bottom: 0;
     }
-}
-.@{prefix-form}-line {
-    width: 100%;
-    padding: 0;
-    margin: 0 0 10px;
-    display: block;
-    float: none;
-    display: block;
-    font: bold 13px/14px @font-secondary;
-    letter-spacing: -.025em;
-    color: @color-light-gray;
 
-    &:after {
-        .clearfix;
+    .@{prefix-form}-line {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 10px;
+        display: block;
+        float: none;
+        display: block;
+        font: bold 13px/14px @font-secondary;
+        letter-spacing: -.025em;
+        color: @color-light-gray;
+
+        &:after {
+            .clearfix;
+        }
     }
-}
-.@{prefix-form}-label {
-    width: 100%;
-    padding: 2px 0 3px;
-    margin: 0;
-    display: block;
-    font: inherit;
-    color: inherit;
-}
-.@{prefix-form}-text {
-    width: 100%;
-    padding: 9px 6px;
-    border: 1px solid @color-gray;
-    border-radius: 3px;
-    margin: 0;
-    display: block;
-    float: none;
-    display: block;
-    font: 12px @font-primary;
-    color: @color-gray;
-}
-.@{prefix-form}-submit {
-    width: 100%;
-    height: 45px;
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    margin-top: 38px;
-    display: block;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 35px;
-    text-decoration: none;
-    letter-spacing: -.02em;
-    color: @color-white;
-    text-align: center;
-    background: @color-green;
-    transition: background-color @duration;
-    box-shadow: inset 0 -4px 0 0 @color-green-dark;
-    &:hover {
-        color: @color-white;
+    .@{prefix-form}-label {
+        width: 100%;
+        padding: 2px 0 3px;
+        margin: 0;
+        display: block;
+        font: inherit;
+        color: inherit;
+    }
+    .@{prefix-form}-text {
+        width: 100%;
+        padding: 9px 6px;
+        border: 1px solid @color-gray;
+        border-radius: 3px;
+        margin: 0;
+        display: block;
+        float: none;
+        display: block;
+        font: 12px @font-primary;
+        color: @color-gray;
+    }
+    .@{prefix-form}-submit {
+        width: 100%;
+        height: 45px;
+        padding: 5px;
+        border: none;
+        border-radius: 3px;
+        margin-top: 38px;
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 35px;
         text-decoration: none;
-        background: @color-green-dark;
+        letter-spacing: -.02em;
+        color: @color-white;
+        text-align: center;
+        background: @color-green;
+        transition: background-color @duration;
+        box-shadow: inset 0 -4px 0 0 @color-green-dark;
+        &:hover {
+            color: @color-white;
+            text-decoration: none;
+            background: @color-green-dark;
+        }
     }
 }
