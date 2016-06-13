@@ -30,6 +30,23 @@
 .wchat-container *:focus {
   outline: -webkit-focus-ring-color auto 0;
 }
+.wchat-container.wchat-container-top-left {
+  right: auto;
+  bottom: auto;
+  top: 0;
+  left: 0;
+}
+.wchat-container.wchat-container-top-right {
+  bottom: auto;
+  top: 0;
+}
+.wchat-container.wchat-container-bottom-left {
+  left: 0;
+  right: auto;
+}
+.wchat-hidden {
+  display: none;
+}
 /* ==========================================================================
    WINDOW
    ========================================================================== */
@@ -260,6 +277,47 @@
   color: #fff;
   text-decoration: none;
   background: #61c351;
+}
+/* ==========================================================================
+   CHAT-BOX
+   ========================================================================== */
+.wchat-box {
+  margin: -33px -40px;
+}
+.wchat-box:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.wchat-box .wchat-messages {
+  height: 260px;
+  overflow: hidden;
+  overflow-y: scroll;
+  font: 500 18px/18px 'Calibri', Helvetica, Arial, sans-serif;
+  color: #515151;
+}
+.wchat-box .wchat-messages .wchat-line {
+  padding: 8px 24px 8px 14px;
+  letter-spacing: -0.053em;
+}
+.wchat-box .wchat-messages .wchat-line.wchat-line-question {
+  padding-left: 50px;
+  color: #077cff;
+  text-align: right;
+}
+.wchat-box .wchat-form-message {
+  margin: 0;
+  border-top: 1px solid #c9c9c9;
+}
+.wchat-box .wchat-form-message textarea {
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  display: block;
+  border: none;
+  resize: none;
+  font: 500 17px/18px 'Calibri', Helvetica, Arial, sans-serif;
+  color: #515151;
 }
 /* ==========================================================================
    RESPONSIVE
