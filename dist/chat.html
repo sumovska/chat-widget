@@ -11,9 +11,9 @@
 
 <body>
 
-	<div class="wchat-container wchat-container-top-left">
+	<div class="wchat-container">
 		<div class="wchat-start">
-			<a class="wchat-link" href="#">
+			<a class="wchat-open-chat" href="#">
 				<div class="wchat-photo">
 					<img src="img/avatar.jpg" alt="Username">
 					<div class="wchat-activity">online</div>
@@ -24,13 +24,13 @@
 				</div>
 			</a>
 		</div>
-	</div>
-
-	<div class="wchat-container">
 		<div class="wchat-window">
 			<div class="wchat-header">
 				<div class="wchat-avatar"><img src="img/avatar.jpg" alt="Username"></div>
-				<div class="wchat-heading"><div class="wchat-mobile-hidden">I’m Here to Help You</div> <div class="wchat-desktop-hidden">Hello!</div></div>
+				<div class="wchat-heading">
+					<div class="wchat-mobile-hidden">I’m Here to Help You</div>
+					<div class="wchat-desktop-hidden">Hello!</div>
+				</div>
 				<a class="wchat-minimize" href="#"></a>
 				<a class="wchat-close" href="#"></a>
 			</div>
@@ -52,20 +52,6 @@
 						<a class="wchat-form-submit" href="#">Start Chat</a>
 					</div>
 				</form>
-			</div>
-			<div class="wchat-footer">Powered by <a href="http://smartchat.com" target="_blank">SmartChat.com</a></div>
-		</div>
-	</div>
-
-	<div class="wchat-container wchat-container-bottom-left">
-		<div class="wchat-window">
-			<div class="wchat-header">
-				<div class="wchat-avatar"><img src="img/avatar.jpg" alt="Username"></div>
-				<div class="wchat-heading"><div class="wchat-mobile-hidden">Chatting with</div> Robert</div>
-				<a class="wchat-minimize" href="#"></a>
-				<a class="wchat-close" href="#"></a>
-			</div>
-			<div class="wchat-content">
 				<div class="wchat-box">
 					<div class="wchat-messages">
 						<div class="wchat-line wchat-line-answer">Rob, nice to see you. Anything I can help you with?</div>
@@ -76,34 +62,7 @@
 						<div class="wchat-line wchat-line-question">Ok Thanks for your help. I don’t know what elase to ask, so this is it. It was nice talking to you.</div>
 					</div>
 					<form class="wchat-form-message" action="#" method="post">
-							<textarea placeholder="Type your message here and press Enter to send"></textarea>
-					</form>
-				</div>
-			</div>
-			<div class="wchat-footer">Powered by <a href="http://smartchat.com" target="_blank">SmartChat.com</a></div>
-		</div>
-	</div>
-
-	<div class="wchat-container wchat-container-top-right">
-		<div class="wchat-window">
-			<div class="wchat-header">
-				<div class="wchat-avatar"><img src="img/avatar.jpg" alt="Username"></div>
-				<div class="wchat-heading">Chatting with Robert</div>
-				<a class="wchat-minimize" href="#"></a>
-				<a class="wchat-close" href="#"></a>
-			</div>
-			<div class="wchat-content">
-				<div class="wchat-box">
-					<div class="wchat-messages">
-						<div class="wchat-line wchat-line-answer">Rob, nice to see you. Anything I can help you with?</div>
-						<div class="wchat-line wchat-line-question">What's the pricing?</div>
-						<div class="wchat-line wchat-line-answer">Price depends on the number of operator seats (simultaneously logged in agents).</div>
-						<div class="wchat-line wchat-line-question">Ok Thanks for your help. I don’t know what elase to ask, so this is it. It was nice talking to you.</div>
-						<div class="wchat-line wchat-line-answer">Rob, nice to see you. Anything I can help you with?</div>
-						<div class="wchat-line wchat-line-question">Ok Thanks for your help. I don’t know what elase to ask, so this is it. It was nice talking to you.</div>
-					</div>
-					<form class="wchat-form-message" action="#" method="post">
-							<textarea placeholder="Type your message here and press Enter to send"></textarea>
+						<textarea placeholder="Type your message here and press Enter to send"></textarea>
 					</form>
 				</div>
 			</div>
@@ -111,12 +70,14 @@
 			<div class="wchat-popup-close">
 				<div>Do you really want to leave current chat?</div>
 				<div class="wchat-buttons">
-					<a class="wchat-button wchat-button-red" href="#">Close the chat</a>
-					<a class="wchat-button" href="#">Cancel</a>
+					<a class="wchat-button wchat-button-red wchat-popup-close-yes" href="#">Close the chat</a>
+					<a class="wchat-button wchat-popup-close-no" href="#">Cancel</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src=js/chat-widget.js></script>
 
 </body>
 

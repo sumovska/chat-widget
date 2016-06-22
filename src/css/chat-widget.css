@@ -63,6 +63,7 @@
   margin-right: 15px;
   position: relative;
   overflow: hidden;
+  display: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 0;
   background: #fff;
@@ -71,6 +72,10 @@
 .wchat-container-top-left .wchat-window,
 .wchat-container-bottom-left .wchat-window {
   margin-left: 15px;
+  margin-right: auto;
+}
+.wchat-window-visible .wchat-window {
+  display: block;
 }
 /* ==========================================================================
    HEADER
@@ -230,6 +235,9 @@
 .wchat-form-login .wchat-form-line:last-child {
   margin-bottom: 0;
 }
+.wchat-window-chat-visible .wchat-form-login {
+  display: none;
+}
 .wchat-form-login .wchat-form-line {
   width: 100%;
   padding: 0;
@@ -294,6 +302,10 @@
    ========================================================================== */
 .wchat-box {
   margin: -33px -40px;
+  display: none;
+}
+.wchat-window-chat-visible .wchat-box {
+  display: block;
 }
 .wchat-box:after {
   display: table;
@@ -344,7 +356,10 @@
   content: '\0020';
   clear: both;
 }
-.wchat-start .wchat-link {
+.wchat-window-visible .wchat-start {
+  display: none;
+}
+.wchat-start .wchat-open-chat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,16 +368,16 @@
   -webkit-transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.wchat-start .wchat-link:hover, .wchat-start .wchat-link:focus {
+.wchat-start .wchat-open-chat:hover, .wchat-start .wchat-open-chat:focus {
   color: #fff;
 }
-.wchat-start .wchat-link:hover .wchat-text, .wchat-start .wchat-link:focus .wchat-text {
+.wchat-start .wchat-open-chat:hover .wchat-text, .wchat-start .wchat-open-chat:focus .wchat-text {
   background: #2683d3;
 }
-.wchat-start .wchat-link:hover .wchat-text:after, .wchat-start .wchat-link:focus .wchat-text:after {
+.wchat-start .wchat-open-chat:hover .wchat-text:after, .wchat-start .wchat-open-chat:focus .wchat-text:after {
   border-color: transparent transparent transparent #2683d3;
 }
-.wchat-start .wchat-link:hover .wchat-title, .wchat-start .wchat-link:focus .wchat-title {
+.wchat-start .wchat-open-chat:hover .wchat-title, .wchat-start .wchat-open-chat:focus .wchat-title {
   color: #fff;
 }
 .wchat-start .wchat-photo {
@@ -468,9 +483,7 @@
   padding: 0 10px;
   text-align: center;
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: center;
@@ -485,6 +498,11 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
+}
+.wchat-window-close-visible .wchat-popup-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .wchat-popup-close .wchat-buttons {
   margin-top: 44px;
@@ -539,6 +557,7 @@
   .wchat-container-top-left .wchat-window,
   .wchat-container-bottom-left .wchat-window {
     margin-left: 30px;
+    margin-right: auto;
   }
   .wchat-start {
     margin: 30px;
