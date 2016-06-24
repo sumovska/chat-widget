@@ -198,6 +198,12 @@
   white-space: nowrap;
   background: #f2f2f2;
 }
+.wchat-window-minimized .wchat-footer {
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .wchat-footer a {
   border: none;
   display: inline;
@@ -223,6 +229,9 @@
   display: table;
   content: '\0020';
   clear: both;
+}
+.wchat-window-minimized .wchat-content {
+  display: none;
 }
 /* ==========================================================================
    FORM-LOGIN
@@ -394,6 +403,10 @@
           order: 20;
   text-align: center;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .wchat-start .wchat-photo img {
   width: 100%;
@@ -435,12 +448,17 @@
   border: 3px solid #2683d3;
   -ms-flex-line-pack: center;
       align-content: center;
+  position: relative;
   text-transform: capitalize;
   font-size: 12px;
   line-height: 12px;
   -webkit-transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
 }
 .wchat-start .wchat-text:before,
 .wchat-start .wchat-text:after {
@@ -473,6 +491,7 @@
   font-size: 26px;
   line-height: 30px;
   font-weight: bold;
+  white-space: nowrap;
   -webkit-transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

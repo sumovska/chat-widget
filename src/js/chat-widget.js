@@ -2,9 +2,14 @@ function initWchat(prefix) {
     var container = $('.wchat-container'),
         closePopup = $('.wchat-popup-close', container);
 
+    // Minimize chat action
+    $('.wchat-minimize', container).on('click', function() {
+        container.toggleClass('wchat-window-minimized');
+        return false;
+    });
     // Close chat action
     $('.wchat-close', container).on('click', function() {
-        container.addClass('wchat-window-close-visible');
+        container.removeClass('wchat-window-minimized').addClass('wchat-window-close-visible');
         return false;
     });
     // Close chat - Yes

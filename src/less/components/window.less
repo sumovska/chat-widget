@@ -150,6 +150,13 @@
     white-space: nowrap;
     background: @color-silver;
 
+    .wchat-window-minimized & {
+        height: auto;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
     a {
         border: none;
         display: inline;
@@ -173,6 +180,10 @@
 
     &:after {
         .clearfix;
+    }
+
+    .wchat-window-minimized & {
+        display: none;
     }
 }
 /* ==========================================================================
@@ -344,6 +355,7 @@
         order: 20;
         text-align: center;
         position: relative;
+        user-select: none;
         img {
             width: 100%;
             height: auto;
@@ -379,11 +391,13 @@
         border-radius: 10px;
         border: 3px solid @color-blue;
         align-content: center;
+        position: relative;
         text-transform: capitalize;
         font-size: 12px;
         line-height: 12px;
         transition: background @duration;
-        position: relative;
+        user-select: none;
+        white-space: nowrap;
         &:before, &:after {
             .pseudo;
             margin: auto 0;
@@ -412,6 +426,7 @@
         font-size: 26px;
         line-height: 30px;
         font-weight: bold;
+        white-space: nowrap;
         transition: color @duration;
     }
 }
